@@ -1,0 +1,30 @@
+services:
+  mysql:      
+      image: mysql/mysql-server
+      volumes:
+      - db-volume:/var/lib/mysql
+      environment:
+        MYSQL_DATABASE: dbTaller1
+        MYSQL_ROOT_PASSWORD: 12345
+      
+  
+  taller1-console:
+    image: image/taller1-console:1.0
+    container_name: taller1-console
+    command: ["dotnet", "Taller1.Infrastructure.Console.dll"]
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Production 
+      - MYSQL_CONNECTION_STRING=Server=mysql;port=3306;Database=dbTaller1;User=root;Password=12345;
+    stdin_open: true
+    tty: true        
+    deploy:
+      resources:
+        limits:
+          memory: 512M
+        reservations:
+          memory: 128M   
+    depends_on:
+      - mysql 
+    
+volumes:
+  db-volume:

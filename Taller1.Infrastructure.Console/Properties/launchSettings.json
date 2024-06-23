@@ -1,0 +1,10 @@
+﻿{
+  "profiles": {
+    "Taller1.Infrastructure.Console": {
+      "commandName": "Project"
+    },
+    "Container (Dockerfile)": {
+      "commandName": "Docker"
+    }
+  }
+}
