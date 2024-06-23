@@ -47,7 +47,7 @@ namespace Taller1.Infrastructure.Console
             num2 = Convert.ToInt32(System.Console.ReadLine());
 
             var calculatorService = CreateCalculatorService();
-            var responseSum = calculatorService.Sum(new RequestSum() { Num1 = num1, Num2 = num2 });
+            var responseSum = calculatorService.GetSum(new Sum() { Num1 = num1, Num2 = num2 });
             result = $"El resultado de la operación suma es: {num1} + {num2} = " + responseSum.Result;
             System.Console.WriteLine(result);
 

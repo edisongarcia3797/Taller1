@@ -1,17 +1,29 @@
 ﻿using Taller1.Domain.Models;
+using Taller1.Domain.Validations;
+using FluentValidation.Results;
 
 namespace Taller1.Application.Services
 {
-    public class CalculatorService 
+    public class CalculatorService
     {
-        public ResponseSum Sum(RequestSum requestSum)
+        private readonly SumValidator _sumValidator;
+        public CalculatorService()
         {
-            ResponseSum responseSum = new();
+            _sumValidator = new SumValidator();
+        }
 
-            if (requestSum == null)
-                throw new ArgumentNullException("El 'Producto' es requerido");
+        public Sum GetSum(Sum requestSum)
+        {
+            Sum responseSum = new();
+
+            ValidationResult result = _sumValidator.Validate(requestSum);
 
             responseSum.Result = requestSum.Num1 + requestSum.Num2;
+
+            if (!result.IsValid)
+                foreach (var error in result.Errors)
+                    Console.WriteLine($"Error en {error.PropertyName} {error.ErrorMessage}");
+
 
             return responseSum;
         }
