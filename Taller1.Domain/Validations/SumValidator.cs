@@ -1,5 +1,4 @@
 ﻿using FluentValidation;
-using Taller1.Domain.Interfaces;
 using Taller1.Domain.Models;
 
 namespace Taller1.Domain.Validations
