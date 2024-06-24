@@ -10,8 +10,4 @@
     <ProjectReference Include="..\Taller1.Domain\Taller1.Domain.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Interfaces\" />
-  </ItemGroup>
-
 </Project>
