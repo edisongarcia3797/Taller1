@@ -13,12 +13,10 @@ namespace Taller1.Infrastructure.Console
         static  async Task Main(string[] args)
         {
             #region ConfigurationBuilder
-            var serviceCollection = new ServiceCollection();
             var builder = new ConfigurationBuilder()
                           .SetBasePath(Directory.GetParent(AppContext.BaseDirectory).FullName)
                           .AddEnvironmentVariables();
             IConfiguration config = builder.Build();
-            serviceCollection.AddSingleton<IConfiguration>(config);
             #endregion
 
             #region Crear servicios de aplicación
