@@ -67,9 +67,9 @@ namespace Taller1.Infrastructure.Console
 
             if (System.Console.ReadLine().ToUpperInvariant() ==  "S")
             {
-                System.Console.WriteLine("Ingrese la fecha inicial del histórico de operacinoes en formato 'yyyy-MM-ddTHH:mm:ss'.");
+                System.Console.WriteLine("Ingrese la fecha inicial del histórico de operacinoes en formato 'yyyy-MM-ddTHH:mm:ss'. Ejemplo: (2024-06-23T20:00:00)");
                 DateTime.TryParse(System.Console.ReadLine(), out DateTime StartDate);
-                System.Console.WriteLine("Ingrese la fecha final del histórico de operacinoes en formato 'yyyy-MM-ddTHH:mm:ss'.");
+                System.Console.WriteLine("Ingrese la fecha final del histórico de operacinoes en formato 'yyyy-MM-ddTHH:mm:ss'. Ejemplo: (2024-06-23T20:00:00)");
                 DateTime.TryParse(System.Console.ReadLine(), out DateTime EndDate);
 
                 var listOperation = operationService.QueryOperations(StartDate, EndDate);
