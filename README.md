@@ -14,7 +14,7 @@
 - [Crear contenedores con docker-compose](#crear-contenedores)
 - [Ejecutar proyecto](#ejecutar-proyecto)
 
-- 
+
 #### Crear base de datos
 
 1. Crear la base de datos con nombre SISTEMABANCARIO en una instancia local de SQL Express
