@@ -9,7 +9,6 @@ namespace Taller1.Infrastructure.Data.Context
         public OperationContext(string connectionString)
         {
             _connectionString = connectionString;
-
         }
         protected override void OnConfiguring(DbContextOptionsBuilder options)
         {
