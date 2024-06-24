@@ -15,12 +15,26 @@ namespace Taller1.Application.Services
 
         public List<Operation> QueryOperations(DateTime StartDate, DateTime EndDate)
         {
-            return _repository.QueryOperations(StartDate, EndDate);
+            try
+            {
+                return _repository.QueryOperations(StartDate, EndDate);
+            }
+            catch (Exception ex) 
+            {
+                throw new Exception($"An error occurred during the query operation", ex);
+            }
         }
 
         public async Task<Operation> SaveOperationAsync(Operation operation)
         {
-            return await _repository.SaveOperationAsync(operation);
+            try
+            {
+                return await _repository.SaveOperationAsync(operation);
+            }
+            catch (Exception ex) 
+            {
+                throw new Exception("An error occurred during the save operation", ex);
+            }
         }
     }
 }

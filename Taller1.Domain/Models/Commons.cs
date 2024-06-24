@@ -3,5 +3,7 @@
     public class Commons
     {
         public int Result { get; set; }
+
+        public string? ErrorMessage { get; set; }
     }
 }

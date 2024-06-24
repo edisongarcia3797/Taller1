@@ -15,15 +15,22 @@ namespace Taller1.Application.Services
         public Sum GetSum(Sum requestSum)
         {
             Sum responseSum = new();
+            try
+            {
+                ValidationResult result = _sumValidator.Validate(requestSum);
+                if (!result.IsValid)
+                {
+                    foreach (var error in result.Errors)
+                        responseSum.ErrorMessage = $"A business validation error occurred. Error detail: {error.PropertyName} {error.ErrorMessage}";
+                    return responseSum;
+                }
 
-            ValidationResult result = _sumValidator.Validate(requestSum);
-
-            responseSum.Result = requestSum.Num1 + requestSum.Num2;
-
-            if (!result.IsValid)
-                foreach (var error in result.Errors)
-                    Console.WriteLine($"Error en {error.PropertyName} {error.ErrorMessage}");
-
+                responseSum.Result = requestSum.Num1 + requestSum.Num2;
+            }
+            catch (Exception ex) 
+            { 
+                responseSum.ErrorMessage = $"An error occurred during the sum operation. Error detail: {ex.Message}";
+            }
 
             return responseSum;
         }

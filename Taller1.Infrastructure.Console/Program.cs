@@ -40,7 +40,7 @@ namespace Taller1.Infrastructure.Console
 
             #region Invoca servicios de operación suma y guardado de la operación en la base de datos
             int num1, num2;
-            string result;
+            string response;
             System.Console.WriteLine("Ingrese un número y presione la tecla Enter");
             num1 = Convert.ToInt32(System.Console.ReadLine());
             System.Console.WriteLine("Ingrese el segundo número y presione la tecla Enter");
@@ -48,13 +48,13 @@ namespace Taller1.Infrastructure.Console
 
             var calculatorService = CreateCalculatorService();
             var responseSum = calculatorService.GetSum(new Sum() { Num1 = num1, Num2 = num2 });
-            result = $"El resultado de la operación suma es: {num1} + {num2} = " + responseSum.Result;
-            System.Console.WriteLine(result);
+            response = !string.IsNullOrEmpty(responseSum.ErrorMessage) ? responseSum.ErrorMessage :  $"El resultado de la operación suma es: {num1} + {num2} = " + responseSum.Result;
+            System.Console.WriteLine(response);
 
             var operation = new Operation()
             {
                 IdOperation = Guid.NewGuid().ToString(),
-                Description = result,
+                Description = response,
                 CreationDate = DateTime.Now
             };
 
@@ -63,17 +63,14 @@ namespace Taller1.Infrastructure.Console
             #endregion
 
             #region Opción para consultar el histórico de operaciones
-            System.Console.WriteLine("Si desea consultar el histórico de operaciones, poer favor presione la tecla S");
+            System.Console.WriteLine("Si desea consultar el histórico de operaciones, por favor presione la tecla S");
+
             if (System.Console.ReadLine().ToUpperInvariant() ==  "S")
             {
-                DateTime StartDate, EndDate;
-                System.Console.WriteLine("Ingrese la fecha inicial del histórico de operacinoes en formato '2024-06-18T10:00:00'.");
-                //StartDate = Convert.ToDateTime(System.Console.ReadLine());
-                System.Console.WriteLine("Ingrese la fecha final del histórico de operacinoes en formato '2024-06-18T10:00:00'.");
-                //EndDate = Convert.ToDateTime(System.Console.ReadLine());
-
-                StartDate = DateTime.Now.AddDays(-1);
-                EndDate = DateTime.Now.AddDays(1);
+                System.Console.WriteLine("Ingrese la fecha inicial del histórico de operacinoes en formato 'yyyy-MM-ddTHH:mm:ss'.");
+                DateTime.TryParse(System.Console.ReadLine(), out DateTime StartDate);
+                System.Console.WriteLine("Ingrese la fecha final del histórico de operacinoes en formato 'yyyy-MM-ddTHH:mm:ss'.");
+                DateTime.TryParse(System.Console.ReadLine(), out DateTime EndDate);
 
                 var listOperation = operationService.QueryOperations(StartDate, EndDate);
                 foreach (var item in listOperation)
