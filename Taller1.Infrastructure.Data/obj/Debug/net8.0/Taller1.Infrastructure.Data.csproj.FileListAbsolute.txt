@@ -1,0 +1,16 @@
+D:\Proyectos\FDLM\Taller1\Taller1.Infrastructure.Data\bin\Debug\net8.0\Taller1.Infrastructure.Data.deps.json
+D:\Proyectos\FDLM\Taller1\Taller1.Infrastructure.Data\bin\Debug\net8.0\Taller1.Infrastructure.Data.dll
+D:\Proyectos\FDLM\Taller1\Taller1.Infrastructure.Data\bin\Debug\net8.0\Taller1.Infrastructure.Data.pdb
+D:\Proyectos\FDLM\Taller1\Taller1.Infrastructure.Data\bin\Debug\net8.0\Taller1.Domain.dll
+D:\Proyectos\FDLM\Taller1\Taller1.Infrastructure.Data\bin\Debug\net8.0\Taller1.Domain.pdb
+D:\Proyectos\FDLM\Taller1\Taller1.Infrastructure.Data\obj\Debug\net8.0\Taller1.Infrastructure.Data.csproj.AssemblyReference.cache
+D:\Proyectos\FDLM\Taller1\Taller1.Infrastructure.Data\obj\Debug\net8.0\Taller1.Infrastructure.Data.GeneratedMSBuildEditorConfig.editorconfig
+D:\Proyectos\FDLM\Taller1\Taller1.Infrastructure.Data\obj\Debug\net8.0\Taller1.Infrastructure.Data.AssemblyInfoInputs.cache
+D:\Proyectos\FDLM\Taller1\Taller1.Infrastructure.Data\obj\Debug\net8.0\Taller1.Infrastructure.Data.AssemblyInfo.cs
+D:\Proyectos\FDLM\Taller1\Taller1.Infrastructure.Data\obj\Debug\net8.0\Taller1.Infrastructure.Data.csproj.CoreCompileInputs.cache
+D:\Proyectos\FDLM\Taller1\Taller1.Infrastructure.Data\obj\Debug\net8.0\Taller1.Infrastructure.Data.sourcelink.json
+D:\Proyectos\FDLM\Taller1\Taller1.Infrastructure.Data\obj\Debug\net8.0\Taller1..0E97B4F5.Up2Date
+D:\Proyectos\FDLM\Taller1\Taller1.Infrastructure.Data\obj\Debug\net8.0\Taller1.Infrastructure.Data.dll
+D:\Proyectos\FDLM\Taller1\Taller1.Infrastructure.Data\obj\Debug\net8.0\refint\Taller1.Infrastructure.Data.dll
+D:\Proyectos\FDLM\Taller1\Taller1.Infrastructure.Data\obj\Debug\net8.0\Taller1.Infrastructure.Data.pdb
+D:\Proyectos\FDLM\Taller1\Taller1.Infrastructure.Data\obj\Debug\net8.0\ref\Taller1.Infrastructure.Data.dll

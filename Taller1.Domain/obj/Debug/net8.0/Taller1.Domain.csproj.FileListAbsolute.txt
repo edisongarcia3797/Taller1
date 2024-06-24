@@ -1,0 +1,13 @@
+D:\Proyectos\FDLM\Taller1\Taller1.Domain\bin\Debug\net8.0\Taller1.Domain.deps.json
+D:\Proyectos\FDLM\Taller1\Taller1.Domain\bin\Debug\net8.0\Taller1.Domain.dll
+D:\Proyectos\FDLM\Taller1\Taller1.Domain\bin\Debug\net8.0\Taller1.Domain.pdb
+D:\Proyectos\FDLM\Taller1\Taller1.Domain\obj\Debug\net8.0\Taller1.Domain.csproj.AssemblyReference.cache
+D:\Proyectos\FDLM\Taller1\Taller1.Domain\obj\Debug\net8.0\Taller1.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\Proyectos\FDLM\Taller1\Taller1.Domain\obj\Debug\net8.0\Taller1.Domain.AssemblyInfoInputs.cache
+D:\Proyectos\FDLM\Taller1\Taller1.Domain\obj\Debug\net8.0\Taller1.Domain.AssemblyInfo.cs
+D:\Proyectos\FDLM\Taller1\Taller1.Domain\obj\Debug\net8.0\Taller1.Domain.csproj.CoreCompileInputs.cache
+D:\Proyectos\FDLM\Taller1\Taller1.Domain\obj\Debug\net8.0\Taller1.Domain.sourcelink.json
+D:\Proyectos\FDLM\Taller1\Taller1.Domain\obj\Debug\net8.0\Taller1.Domain.dll
+D:\Proyectos\FDLM\Taller1\Taller1.Domain\obj\Debug\net8.0\refint\Taller1.Domain.dll
+D:\Proyectos\FDLM\Taller1\Taller1.Domain\obj\Debug\net8.0\Taller1.Domain.pdb
+D:\Proyectos\FDLM\Taller1\Taller1.Domain\obj\Debug\net8.0\ref\Taller1.Domain.dll

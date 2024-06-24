@@ -1,0 +1,156 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\Proyectos\\FDLM\\Taller1\\Taller1.Application\\Taller1.Application.csproj": {}
+  },
+  "projects": {
+    "D:\\Proyectos\\FDLM\\Taller1\\Taller1.Application\\Taller1.Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Proyectos\\FDLM\\Taller1\\Taller1.Application\\Taller1.Application.csproj",
+        "projectName": "Taller1.Application",
+        "projectPath": "D:\\Proyectos\\FDLM\\Taller1\\Taller1.Application\\Taller1.Application.csproj",
+        "packagesPath": "C:\\Users\\edison.garcia\\.nuget\\packages\\",
+        "outputPath": "D:\\Proyectos\\FDLM\\Taller1\\Taller1.Application\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\edison.garcia\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "D:\\Proyectos\\Exito\\OMS\\Migrar Pipeline Clásico a as code": {},
+          "D:\\Proyectos\\Exito\\OMS\\Nugets": {},
+          "D:\\Proyectos\\Exito\\OMS\\integration-connect-services\\arq-int-commos-library\\bin\\Debug": {},
+          "D:\\Proyectos\\Exito\\OMS\\integration-orchest-process\\OrchestManager\\bin\\Debug": {},
+          "D:\\Proyectos\\Exito\\PIM\\sinco-creacion-producto-pim": {},
+          "D:\\Proyectos\\Exito\\PIM_Old\\arq-int-commons-library\\arq-int-commons-library\\arq-int-commos-library\\bin\\Debug": {},
+          "D:\\Proyectos\\Exito\\PIM_Old\\arq-int-orchest-manager\\arq-int-orchest-manager\\OrchestManager\\bin\\Debug": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://packagesource": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "D:\\Proyectos\\FDLM\\Taller1\\Taller1.Domain\\Taller1.Domain.csproj": {
+                "projectPath": "D:\\Proyectos\\FDLM\\Taller1\\Taller1.Domain\\Taller1.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Proyectos\\FDLM\\Taller1\\Taller1.Domain\\Taller1.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Proyectos\\FDLM\\Taller1\\Taller1.Domain\\Taller1.Domain.csproj",
+        "projectName": "Taller1.Domain",
+        "projectPath": "D:\\Proyectos\\FDLM\\Taller1\\Taller1.Domain\\Taller1.Domain.csproj",
+        "packagesPath": "C:\\Users\\edison.garcia\\.nuget\\packages\\",
+        "outputPath": "D:\\Proyectos\\FDLM\\Taller1\\Taller1.Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\edison.garcia\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "D:\\Proyectos\\Exito\\OMS\\Migrar Pipeline Clásico a as code": {},
+          "D:\\Proyectos\\Exito\\OMS\\Nugets": {},
+          "D:\\Proyectos\\Exito\\OMS\\integration-connect-services\\arq-int-commos-library\\bin\\Debug": {},
+          "D:\\Proyectos\\Exito\\OMS\\integration-orchest-process\\OrchestManager\\bin\\Debug": {},
+          "D:\\Proyectos\\Exito\\PIM\\sinco-creacion-producto-pim": {},
+          "D:\\Proyectos\\Exito\\PIM_Old\\arq-int-commons-library\\arq-int-commons-library\\arq-int-commos-library\\bin\\Debug": {},
+          "D:\\Proyectos\\Exito\\PIM_Old\\arq-int-orchest-manager\\arq-int-orchest-manager\\OrchestManager\\bin\\Debug": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://packagesource": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "FluentValidation": {
+              "target": "Package",
+              "version": "[11.9.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
