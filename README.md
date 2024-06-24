@@ -11,25 +11,25 @@
 
 - [Crear imagen del proyecto taller1-console](#crear-proyecto)
 - [Crear contenedores con docker-compose](#crear-contenedores)
-- [Configurar permisos MySql](#config-mysql)
+- [Configurar permisos MySql](#configuración-mysql)
 - [Ejecutar proyecto](#ejecutar-proyecto)
 
   
-#### crear-proyecto
+#### Crear Proyecto
 
 1. Ejecutar script con nombre ScriptCreateDataBase.sql ubicado en el directorio que describe la imagen.
 
 ![Crear](EjecutarScript.png)
 
 
- #### crear-contenedores
+ #### Crear Contenedores
 
 1. Importar la colección de postman con nombre SistemaBancario.postman_collection.json ubicado en el directorio que describe la imagen.
 
 ![Crear](ImportarColeccionPostman.png)
 
 
- #### config-mysql
+ #### Configuración MySql
  
 1. Importar la colección de postman con nombre SistemaBancario.postman_collection.json ubicado en el directorio que describe la imagen.
 
