@@ -1,10 +1,7 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Moq;
 using Taller1.Application.Services;
 using Taller1.Domain.Models;
-using Taller1.Infrastructure.Data.Context;
-using Taller1.Infrastructure.Data.Repositories;
 
 namespace Taller1.Tests
 {
