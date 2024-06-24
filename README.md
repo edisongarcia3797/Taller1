@@ -9,49 +9,73 @@
 
 #### Tabla de contenido
 
-- [Crear imagen de base de datos mysql-server](#crear-base-de-datos)
 - [Crear imagen del proyecto taller1-console](#crear-proyecto)
 - [Crear contenedores con docker-compose](#crear-contenedores)
+- [Configurar permisos MySql](#configuración-mysql)
 - [Ejecutar proyecto](#ejecutar-proyecto)
 
+  
+#### Crear Proyecto
 
-#### Crear base de datos
+1. Clonar el repositorio https://github.com/edisongarcia3797/Taller1.git o descargar los fuentes en la máquina que se ejecutará.
 
-1. Crear la base de datos con nombre SISTEMABANCARIO en una instancia local de SQL Express
+![Crear](Descargar.png)
 
-![Crear](crearbasedatos.png)
+2. Con Docker Desktop instalado en la máquina, desde una consola de comandos CMD ejecute el siguiente comando:
+    docker build -t image/taller1-console:1.0 D:\Proyectos\FDLM\Taller1
+Asegúrese que la ruta que contiene el comando sea correcta.
+Ejemplo:
+![Crear](ImagenTaller1.png)
+
+Si el comando se ejecuta correctamente, se debería visualizar la imagen de la siguiente manera:
+Ejemplo:
+![Crear](ImagenCreada.png)
 
 
-#### crear-proyecto
+ #### Crear Contenedores
 
-1. Ejecutar script con nombre ScriptCreateDataBase.sql ubicado en el directorio que describe la imagen.
+1. Desde una consola de comandos CMD y sobre la ruta del proyecto especificada, ejecute el siguiente comando:
+    docker-compose up
+Ejemplo:
+![Crear](DockerCompose.png)
 
-![Crear](EjecutarScript.png)
+Si el comando se ejecuta correctamente, se debería visualizar Docker Desktop de la siguiente manera:
+Ejemplo:
+![Crear](ContenedoresArriba.png)
 
 
- #### crear-contenedores
+ #### Configuración MySql
+ 
+1. Desde ima cpmspña de cp,amdps CMD, ejecute el siguiente comando:
+    docker exec -it c3297fff4bc443a308a93f1f00a883ea9011eeed976be48725921f3983fb42d6 mysql -u root -p
+Asegúrese que el comando contenga el identificador del contenedor de base de datos.
+Ejemplo:
+![Crear](ConfigBD.png)
 
-1. Importar la colección de postman con nombre SistemaBancario.postman_collection.json ubicado en el directorio que describe la imagen.
+2. Ingrese la contraseña 12345
+Ejemplo:
+![Crear](Contraseña.png)
 
-El endpoint QueryProducts, permite consultar los productos asociados a un cliente. Se puede evidenciar en los Body de los Endpont que hay unos datos comentados. Estos datos corresponden
-a información de carga inicial en la base de daos que servirá como insumo para ejecutar el resto de operaciones.
+3. Configurar permisos al usuario root ejecutando el siguiente comando
+     GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' WITH GRANT OPTION;
+Ejemplo:
+![Crear](ConfigPermisos.png)
 
-Las 4 operaciones descritas en la prueba, están relacionadas de la siguiente manera:
-
-- QueryProducts: 1.Abrir un producto según los diferentes tipos descritos
-- Transaction: 2.Deposito y retiro en cuenta corriente y de ahorro y 3.Cancelar producto
-- AverageInterest: 4.Calcular interés en un periodo de tiempo para determinado producto según los intereses que reconoce el banco y el saldo actual del producto
-
- Adicionalmente, el Endpoint version permite consultar la versión de la API según el Tag    <Version>1.0.0</Version> del proyecto.
-
-![Crear](ImportarColeccionPostman.png)
+4. Asignar permisos al usuario root ejecutando el siguiente comando
+     FLUSH PRIVILEGES;
+Ejemplo:
+![Crear](AsignarPermisos.png)
 
  #### Ejecutar proyecto
 
-1. Abrir y ejecutar el proyecto SistemaBancario.sln ubicado en el directorio que describe la imagen.
-
-Consideraciones. Es un proyecto net7.0 desarrollado en Visual Studio 2022 con la versión del SDK en 7.0.306. Si se presenta algún error de compilación, dejo adjunto en la raíz del prouecto el archivo global.json
-
+1. Desde ima cpmspña de cp,amdps CMD, ejecute el siguiente comando:
+    docker attach cbc35142a6902639fe5bb5dadbd5e27106faaf21452c32cda43095e0e2bad3aa
+Asegúrese que el comando contenga el identificador del contenedor del proyecto Taller1.
+Ejemplo:
 ![Crear](EjecutarProyecto.png)
+
+2. Ejemplo de ejecución:
+![Crear]( Ejecución.png)
+  
 
 Cualquier observación, duda o inquietud con la ejecuión me pueden llamar al celular: 3105486105 o cantactarme al corrreo edison.garcia@sofka.com.co
