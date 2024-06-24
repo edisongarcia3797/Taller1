@@ -15,6 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Taller1.Application\Taller1.Application.csproj" />
     <ProjectReference Include="..\Taller1.Infrastructure.Data\Taller1.Infrastructure.Data.csproj" />
   </ItemGroup>
 

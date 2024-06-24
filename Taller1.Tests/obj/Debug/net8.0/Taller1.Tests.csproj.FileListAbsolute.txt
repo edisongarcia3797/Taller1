@@ -231,3 +231,5 @@ D:\Proyectos\FDLM\Taller1\Taller1.Tests\obj\Debug\net8.0\refint\Taller1.Tests.dl
 D:\Proyectos\FDLM\Taller1\Taller1.Tests\obj\Debug\net8.0\Taller1.Tests.pdb
 D:\Proyectos\FDLM\Taller1\Taller1.Tests\obj\Debug\net8.0\Taller1.Tests.genruntimeconfig.cache
 D:\Proyectos\FDLM\Taller1\Taller1.Tests\obj\Debug\net8.0\ref\Taller1.Tests.dll
+D:\Proyectos\FDLM\Taller1\Taller1.Tests\bin\Debug\net8.0\Taller1.Application.dll
+D:\Proyectos\FDLM\Taller1\Taller1.Tests\bin\Debug\net8.0\Taller1.Application.pdb

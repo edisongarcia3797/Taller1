@@ -13,6 +13,7 @@
           "MSTest.TestFramework": "3.4.3",
           "Microsoft.NET.Test.Sdk": "17.10.0",
           "Moq": "4.20.70",
+          "Taller1.Application": "1.0.0",
           "Taller1.Infrastructure.Data": "1.0.0",
           "Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions": "14.0.0.0"
         },
@@ -1229,6 +1230,14 @@
           }
         }
       },
+      "Taller1.Application/1.0.0": {
+        "dependencies": {
+          "Taller1.Domain": "1.0.0"
+        },
+        "runtime": {
+          "Taller1.Application.dll": {}
+        }
+      },
       "Taller1.Domain/1.0.0": {
         "dependencies": {
           "FluentValidation": "11.9.2"
@@ -1801,6 +1810,11 @@
       "sha512": "sha512-IXoJOXIqc39AIe+CIR7koBtRGMiCt/LPM3lI+PELtDIy9XdyeSrwXFdWV9dzJ2Awl0paLWUaknLxFQ5HpHZUog==",
       "path": "system.windows.extensions/6.0.0",
       "hashPath": "system.windows.extensions.6.0.0.nupkg.sha512"
+    },
+    "Taller1.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     },
     "Taller1.Domain/1.0.0": {
       "type": "project",
