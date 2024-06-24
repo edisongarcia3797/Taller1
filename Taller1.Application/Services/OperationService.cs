@@ -1,10 +1,9 @@
-﻿using Taller1.Application.Interfaces;
-using Taller1.Domain.Interfaces.Repositories;
+﻿using Taller1.Domain.Interfaces.Repositories;
 using Taller1.Domain.Models;
 
 namespace Taller1.Application.Services
 {
-    public class OperationService : IOperationService
+    public class OperationService 
     {
         private readonly IRepository _repository;
 
