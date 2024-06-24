@@ -74,4 +74,8 @@ Asegúrese que el comando contenga el identificador del contenedor del proyecto 
 Ejemplo:
 ![Crear](EjecutarProyecto.png)
 
+2. Ejemplo de ejecución:
+![Crear]( Ejecución.png)
+  
+
 Cualquier observación, duda o inquietud con la ejecuión me pueden llamar al celular: 3105486105 o cantactarme al corrreo edison.garcia@sofka.com.co
