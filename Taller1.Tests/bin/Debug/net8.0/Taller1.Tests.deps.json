@@ -1250,6 +1250,7 @@
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "8.0.6",
           "Pomelo.EntityFrameworkCore.MySql": "8.0.2",
+          "Taller1.Application": "1.0.0",
           "Taller1.Domain": "1.0.0"
         },
         "runtime": {

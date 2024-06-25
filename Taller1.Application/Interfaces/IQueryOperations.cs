@@ -1,6 +1,6 @@
 ﻿using Taller1.Domain.Models;
 
-namespace Taller1.Domain.Interfaces
+namespace Taller1.Application.Repositories
 {
     public interface IQueryOperations
     {

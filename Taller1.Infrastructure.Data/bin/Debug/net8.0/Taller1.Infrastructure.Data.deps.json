@@ -10,6 +10,7 @@
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "8.0.6",
           "Pomelo.EntityFrameworkCore.MySql": "8.0.2",
+          "Taller1.Application": "1.0.0",
           "Taller1.Domain": "1.0.0"
         },
         "runtime": {
@@ -182,6 +183,14 @@
           }
         }
       },
+      "Taller1.Application/1.0.0": {
+        "dependencies": {
+          "Taller1.Domain": "1.0.0"
+        },
+        "runtime": {
+          "Taller1.Application.dll": {}
+        }
+      },
       "Taller1.Domain/1.0.0": {
         "dependencies": {
           "FluentValidation": "11.9.2"
@@ -309,6 +318,11 @@
       "sha512": "sha512-XjnlcxVBLnEMbyEc5cZzgZeDyLvAniACZQ04W1slWN0f4rmfNzl98gEMvHnFH0fMDF06z9MmgGi/Sr7hJ+BVnw==",
       "path": "pomelo.entityframeworkcore.mysql/8.0.2",
       "hashPath": "pomelo.entityframeworkcore.mysql.8.0.2.nupkg.sha512"
+    },
+    "Taller1.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     },
     "Taller1.Domain/1.0.0": {
       "type": "project",

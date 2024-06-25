@@ -185,6 +185,9 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
+              "D:\\Proyectos\\FDLM\\Taller1\\Taller1.Application\\Taller1.Application.csproj": {
+                "projectPath": "D:\\Proyectos\\FDLM\\Taller1\\Taller1.Application\\Taller1.Application.csproj"
+              },
               "D:\\Proyectos\\FDLM\\Taller1\\Taller1.Domain\\Taller1.Domain.csproj": {
                 "projectPath": "D:\\Proyectos\\FDLM\\Taller1\\Taller1.Domain\\Taller1.Domain.csproj"
               }

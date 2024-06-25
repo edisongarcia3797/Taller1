@@ -1,7 +1,9 @@
 D:\Proyectos\FDLM\Taller1\Taller1.Infrastructure.Data\bin\Debug\net8.0\Taller1.Infrastructure.Data.deps.json
 D:\Proyectos\FDLM\Taller1\Taller1.Infrastructure.Data\bin\Debug\net8.0\Taller1.Infrastructure.Data.dll
 D:\Proyectos\FDLM\Taller1\Taller1.Infrastructure.Data\bin\Debug\net8.0\Taller1.Infrastructure.Data.pdb
+D:\Proyectos\FDLM\Taller1\Taller1.Infrastructure.Data\bin\Debug\net8.0\Taller1.Application.dll
 D:\Proyectos\FDLM\Taller1\Taller1.Infrastructure.Data\bin\Debug\net8.0\Taller1.Domain.dll
+D:\Proyectos\FDLM\Taller1\Taller1.Infrastructure.Data\bin\Debug\net8.0\Taller1.Application.pdb
 D:\Proyectos\FDLM\Taller1\Taller1.Infrastructure.Data\bin\Debug\net8.0\Taller1.Domain.pdb
 D:\Proyectos\FDLM\Taller1\Taller1.Infrastructure.Data\obj\Debug\net8.0\Taller1.Infrastructure.Data.csproj.AssemblyReference.cache
 D:\Proyectos\FDLM\Taller1\Taller1.Infrastructure.Data\obj\Debug\net8.0\Taller1.Infrastructure.Data.GeneratedMSBuildEditorConfig.editorconfig

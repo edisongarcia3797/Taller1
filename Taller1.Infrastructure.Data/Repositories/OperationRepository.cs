@@ -1,4 +1,4 @@
-﻿using Taller1.Domain.Interfaces.Repositories;
+﻿using Taller1.Application.Repositories;
 using Taller1.Domain.Models;
 using Taller1.Infrastructure.Data.Context;
 

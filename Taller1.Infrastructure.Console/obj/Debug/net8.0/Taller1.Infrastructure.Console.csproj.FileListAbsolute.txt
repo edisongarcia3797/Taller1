@@ -1,9 +1,3 @@
-D:\Proyectos\FDLM\Taller1\Taller1.Infrastructure.Console\obj\Debug\net8.0\Taller1.Infrastructure.Console.csproj.AssemblyReference.cache
-D:\Proyectos\FDLM\Taller1\Taller1.Infrastructure.Console\obj\Debug\net8.0\Taller1.Infrastructure.Console.GeneratedMSBuildEditorConfig.editorconfig
-D:\Proyectos\FDLM\Taller1\Taller1.Infrastructure.Console\obj\Debug\net8.0\Taller1.Infrastructure.Console.AssemblyInfoInputs.cache
-D:\Proyectos\FDLM\Taller1\Taller1.Infrastructure.Console\obj\Debug\net8.0\Taller1.Infrastructure.Console.AssemblyInfo.cs
-D:\Proyectos\FDLM\Taller1\Taller1.Infrastructure.Console\obj\Debug\net8.0\Taller1.Infrastructure.Console.csproj.CoreCompileInputs.cache
-D:\Proyectos\FDLM\Taller1\Taller1.Infrastructure.Console\obj\Debug\net8.0\Taller1.Infrastructure.Console.sourcelink.json
 D:\Proyectos\FDLM\Taller1\Taller1.Infrastructure.Console\bin\Debug\net8.0\Taller1.Infrastructure.Console.exe
 D:\Proyectos\FDLM\Taller1\Taller1.Infrastructure.Console\bin\Debug\net8.0\Taller1.Infrastructure.Console.deps.json
 D:\Proyectos\FDLM\Taller1\Taller1.Infrastructure.Console\bin\Debug\net8.0\Taller1.Infrastructure.Console.runtimeconfig.json
@@ -37,6 +31,12 @@ D:\Proyectos\FDLM\Taller1\Taller1.Infrastructure.Console\bin\Debug\net8.0\Taller
 D:\Proyectos\FDLM\Taller1\Taller1.Infrastructure.Console\bin\Debug\net8.0\Taller1.Application.pdb
 D:\Proyectos\FDLM\Taller1\Taller1.Infrastructure.Console\bin\Debug\net8.0\Taller1.Infrastructure.Data.pdb
 D:\Proyectos\FDLM\Taller1\Taller1.Infrastructure.Console\bin\Debug\net8.0\Taller1.Domain.pdb
+D:\Proyectos\FDLM\Taller1\Taller1.Infrastructure.Console\obj\Debug\net8.0\Taller1.Infrastructure.Console.csproj.AssemblyReference.cache
+D:\Proyectos\FDLM\Taller1\Taller1.Infrastructure.Console\obj\Debug\net8.0\Taller1.Infrastructure.Console.GeneratedMSBuildEditorConfig.editorconfig
+D:\Proyectos\FDLM\Taller1\Taller1.Infrastructure.Console\obj\Debug\net8.0\Taller1.Infrastructure.Console.AssemblyInfoInputs.cache
+D:\Proyectos\FDLM\Taller1\Taller1.Infrastructure.Console\obj\Debug\net8.0\Taller1.Infrastructure.Console.AssemblyInfo.cs
+D:\Proyectos\FDLM\Taller1\Taller1.Infrastructure.Console\obj\Debug\net8.0\Taller1.Infrastructure.Console.csproj.CoreCompileInputs.cache
+D:\Proyectos\FDLM\Taller1\Taller1.Infrastructure.Console\obj\Debug\net8.0\Taller1.Infrastructure.Console.sourcelink.json
 D:\Proyectos\FDLM\Taller1\Taller1.Infrastructure.Console\obj\Debug\net8.0\Taller1..DA023180.Up2Date
 D:\Proyectos\FDLM\Taller1\Taller1.Infrastructure.Console\obj\Debug\net8.0\Taller1.Infrastructure.Console.dll
 D:\Proyectos\FDLM\Taller1\Taller1.Infrastructure.Console\obj\Debug\net8.0\refint\Taller1.Infrastructure.Console.dll

@@ -1,4 +1,4 @@
-﻿namespace Taller1.Domain.Interfaces.Repositories
+﻿namespace Taller1.Application.Repositories
 {
     public interface IRepository : IQueryOperations, ISaveOperation
     {
