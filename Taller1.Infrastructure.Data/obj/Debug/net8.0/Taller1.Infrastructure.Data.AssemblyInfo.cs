@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Taller1.Infrastructure.Data")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b54649066e2ae15fc91ba20342d0b9d73433ba0b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+053a46e1f78b0e02e0e4e5574b1b34f88ca3513a")]
 [assembly: System.Reflection.AssemblyProductAttribute("Taller1.Infrastructure.Data")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Taller1.Infrastructure.Data")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
