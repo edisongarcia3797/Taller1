@@ -8,6 +8,17 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="DataBaseSettings.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="DataBaseSettings.cs">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>DataBaseSettings.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.Extensions.Configuration" Version="8.0.0" />
     <PackageReference Include="Microsoft.Extensions.Configuration.EnvironmentVariables" Version="8.0.0" />
     <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="8.0.0" />
@@ -16,6 +27,27 @@
   <ItemGroup>
     <ProjectReference Include="..\Taller1.Application\Taller1.Application.csproj" />
     <ProjectReference Include="..\Taller1.Infrastructure.Data\Taller1.Infrastructure.Data.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="appsettings.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>appsettings.json</DependentUpon>
+    </Compile>
+    <Compile Update="DataBaseSettings.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>DataBaseSettings.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="appsettings.json">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>appsettings.Designer.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>
