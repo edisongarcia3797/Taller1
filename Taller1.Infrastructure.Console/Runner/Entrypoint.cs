@@ -1,6 +1,8 @@
 ﻿using Microsoft.Extensions.Configuration;
 using System.Text;
 using Taller1.Application.Services;
+using Taller1.Domain;
+using Taller1.Domain.Interfaces;
 using Taller1.Domain.Models;
 using Taller1.Infrastructure.Data.Context;
 using Taller1.Infrastructure.Data.Repositories;
@@ -34,8 +36,8 @@ namespace Taller1.Infrastructure.Console.Runner
             }
             #endregion
 
-            #region Invoca servicios de operación suma y guardado de la operación en la base de datos
-            int num1, num2;
+            #region Invoca servicios de operación suma de números enteros y guardado de la operación en la base de datos
+            int num1, num2, imaginary1, imaginary2;
             string response;
             System.Console.WriteLine("Ingrese un número y presione la tecla Enter");
             num1 = Convert.ToInt32(System.Console.ReadLine());
@@ -43,19 +45,45 @@ namespace Taller1.Infrastructure.Console.Runner
             num2 = Convert.ToInt32(System.Console.ReadLine());
 
             var calculatorService = CreateCalculatorService();
-            var responseSum = calculatorService.GetSum(new Sum() { Num1 = num1, Num2 = num2 });
+
+            ISum sumInteger = new SumInteger(new Integer() { Num1 = num1,Num2 = num2});
+            var responseSum = calculatorService.GetSum(sumInteger);
+
             response = !string.IsNullOrEmpty(responseSum.ErrorMessage) ? responseSum.ErrorMessage : $"El resultado de la operación suma es: {num1} + {num2} = " + responseSum.Result;
             System.Console.WriteLine(response);
 
-            var operation = new Operation()
+            var operationService = CreateOperationService();
+            await operationService.SaveOperationAsync(new Operation()
             {
                 IdOperation = Guid.NewGuid().ToString(),
                 Description = response,
                 CreationDate = DateTime.Now
-            };
+            });
+            #endregion
 
-            var operationService = CreateOperationService();
-            await operationService.SaveOperationAsync(operation);
+            #region Invoca servicios de operación suma de números complejos y guardado de la operación en la base de datos
+
+            System.Console.WriteLine("Ingrese un número real y presione la tecla Enter");
+            num1 = Convert.ToInt32(System.Console.ReadLine());
+            System.Console.WriteLine("Ingrese el segundo número real y presione la tecla Enter");
+            num2 = Convert.ToInt32(System.Console.ReadLine());
+            System.Console.WriteLine("Ingrese un número que represente la parte imaginaria y presione la tecla Enter");
+            imaginary1 = Convert.ToInt32(System.Console.ReadLine());
+            System.Console.WriteLine("Ingrese el segundo número que represente la parte imaginaria  y presione la tecla Enter");
+            imaginary2 = Convert.ToInt32(System.Console.ReadLine());
+
+            ISum sumComplex = new SumComplex(new Complex() { Num1 = num1, Imaginary1 = imaginary1, Num2 = num2, Imaginary2 = imaginary2 });
+            responseSum = calculatorService.GetSum(sumComplex);
+
+            response = !string.IsNullOrEmpty(responseSum.ErrorMessage) ? responseSum.ErrorMessage : $"El resultado de la operación suma es: ({num1} + {imaginary1}i) + ({num2} + {imaginary2}i)= " + responseSum.Result;
+            System.Console.WriteLine(response);
+
+            await operationService.SaveOperationAsync(new Operation()
+            {
+                IdOperation = Guid.NewGuid().ToString(),
+                Description = response,
+                CreationDate = DateTime.Now
+            });
             #endregion
 
             #region Opción para consultar el histórico de operaciones

@@ -1,9 +1,8 @@
 ﻿namespace Taller1.Domain.Models
 {
-    public class Commons
+    public class Response
     {
-        public int? Result { get; set; }
-
+        public string? Result { get; set; }
         public string? ErrorMessage { get; set; }
     }
 }
