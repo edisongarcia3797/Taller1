@@ -2,6 +2,6 @@
 {
     public interface ISum 
     {
-        string GetResult();
+        string? GetResult();
     }
 }

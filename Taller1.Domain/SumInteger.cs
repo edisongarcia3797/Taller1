@@ -15,7 +15,7 @@ namespace Taller1.Domain
             _integer = integer;
         }
 
-        public string GetResult()
+        public string? GetResult()
         {
             var result = _integerValidator.Validate(_integer);
             if (!result.IsValid)
