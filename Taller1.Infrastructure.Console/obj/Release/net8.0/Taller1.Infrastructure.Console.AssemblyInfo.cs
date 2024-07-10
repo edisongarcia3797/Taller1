@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Taller1.Infrastructure.Console")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8007f06cac8d94047f2894c431aabb18f27f7a02")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0b80c2d081d157d0e31db3b8e7bbf7ece0c137f9")]
 [assembly: System.Reflection.AssemblyProductAttribute("Taller1.Infrastructure.Console")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Taller1.Infrastructure.Console")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

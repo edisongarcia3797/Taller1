@@ -1,0 +1,6 @@
+@Taller1.Infrastructure.API_HostAddress = http://localhost:5031
+
+GET {{Taller1.Infrastructure.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

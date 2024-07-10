@@ -1,9 +1,10 @@
-﻿using Taller1.Domain.Interfaces;
+﻿using Taller1.Application.Interfaces;
+using Taller1.Domain.Interfaces;
 using Taller1.Domain.Models;
 
 namespace Taller1.Application.Services
 {
-    public class CalculatorService
+    public class CalculatorService : ICalculatorService
     {
         public Response GetSumTwoNumbers(ISum sum)
         {

@@ -13,6 +13,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Taller1.Application", "Tall
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Taller1.Infrastructure.Data", "Taller1.Infrastructure.Data\Taller1.Infrastructure.Data.csproj", "{0634BC10-271B-40DC-8C06-C59DA9974305}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Taller1.Infrastructure.API", "Taller1.Infrastructure.API\Taller1.Infrastructure.API.csproj", "{813AE03A-EFB7-4B1F-8C17-7C31D328F8DC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{0634BC10-271B-40DC-8C06-C59DA9974305}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0634BC10-271B-40DC-8C06-C59DA9974305}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0634BC10-271B-40DC-8C06-C59DA9974305}.Release|Any CPU.Build.0 = Release|Any CPU
+		{813AE03A-EFB7-4B1F-8C17-7C31D328F8DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{813AE03A-EFB7-4B1F-8C17-7C31D328F8DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{813AE03A-EFB7-4B1F-8C17-7C31D328F8DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{813AE03A-EFB7-4B1F-8C17-7C31D328F8DC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
