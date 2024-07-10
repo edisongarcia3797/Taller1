@@ -21,7 +21,7 @@ namespace Taller1.Domain
 
         public string GetMultiplicationNumbers()
         {
-            int? multNumber = 0, multImaginary = 0;
+            int? multNumber = 1, multImaginary = 1;
 
             if (_complex.Numbers != null && _complex.Numbers.Any() && _complex.Imaginarys != null && _complex.Imaginarys.Any())
             {
