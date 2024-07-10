@@ -4,5 +4,6 @@
     {
         public int? Imaginary1 { get; set; }
         public int? Imaginary2 { get; set; }
+        public int[]? Imaginarys { get; set; }
     }
 }

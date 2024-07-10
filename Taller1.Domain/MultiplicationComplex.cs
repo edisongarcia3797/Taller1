@@ -12,7 +12,7 @@ namespace Taller1.Domain
             _complex = complex;
         }
 
-        public string GetResult()
+        public string GetMultiplicationTwoNumbers()
         {
             int? newReal = _complex.Num1 * _complex.Num2;
             int? newImaginary = _complex.Imaginary1 * _complex.Imaginary2;

@@ -36,20 +36,20 @@ namespace Taller1.Infrastructure.Console.Runner
             }
             #endregion
 
-            #region Invoca servicios de operación suma de números enteros y guardado de la operación en la base de datos
+            #region Invoca servicios de operación suma de dos números enteros y guardado de la operación en la base de datos
             int num1, num2, imaginary1, imaginary2;
             string response;
-            System.Console.WriteLine("(Suma Números Enteros) -> Ingrese un número y presione la tecla Enter");
+            System.Console.WriteLine("(Suma 2 Números Enteros) -> Ingrese un número y presione la tecla Enter");
             num1 = Convert.ToInt32(System.Console.ReadLine());
-            System.Console.WriteLine("(Suma Números Enteros) -> Ingrese el segundo número y presione la tecla Enter");
+            System.Console.WriteLine("(Suma 2 Números Enteros) -> Ingrese el segundo número y presione la tecla Enter");
             num2 = Convert.ToInt32(System.Console.ReadLine());
 
             var calculatorService = CreateCalculatorService();
 
-            ISum sumInteger = new SumInteger(new Integer() { Num1 = num1,Num2 = num2});
-            var responseSum = calculatorService.GetSum(sumInteger);
+            ISum sumTwoInteger = new SumInteger(new Integer() { Num1 = num1,Num2 = num2});
+            var responseSumTwoNumbers = calculatorService.GetSumTwoNumbers(sumTwoInteger);
 
-            response = !string.IsNullOrEmpty(responseSum.ErrorMessage) ? responseSum.ErrorMessage : $"El resultado de la operación suma es: {num1} + {num2} = " + responseSum.Result;
+            response = !string.IsNullOrEmpty(responseSumTwoNumbers.ErrorMessage) ? responseSumTwoNumbers.ErrorMessage : $"El resultado de la operación suma es: {num1} + {num2} = " + responseSumTwoNumbers.Result;
             System.Console.WriteLine(response);
 
             var operationService = CreateOperationService();
@@ -61,21 +61,43 @@ namespace Taller1.Infrastructure.Console.Runner
             });
             #endregion
 
-            #region Invoca servicios de operación suma de números complejos y guardado de la operación en la base de datos
+            #region Invoca servicios de operación suma de dos números complejos y guardado de la operación en la base de datos
 
-            System.Console.WriteLine("(Suma Números Complejos) -> Ingrese un número real y presione la tecla Enter");
+            System.Console.WriteLine("(Suma 2 Números Complejos) -> Ingrese un número real y presione la tecla Enter");
             num1 = Convert.ToInt32(System.Console.ReadLine());
-            System.Console.WriteLine("(Suma Números Complejos) -> Ingrese el segundo número real y presione la tecla Enter");
+            System.Console.WriteLine("(Suma 2 Números Complejos) -> Ingrese el segundo número real y presione la tecla Enter");
             num2 = Convert.ToInt32(System.Console.ReadLine());
-            System.Console.WriteLine("(Suma Números Complejos) -> Ingrese un número que represente la parte imaginaria y presione la tecla Enter");
+            System.Console.WriteLine("(Suma 2 Números Complejos) -> Ingrese un número que represente la parte imaginaria y presione la tecla Enter");
             imaginary1 = Convert.ToInt32(System.Console.ReadLine());
-            System.Console.WriteLine("(Suma Números Complejos) -> Ingrese el segundo número que represente la parte imaginaria  y presione la tecla Enter");
+            System.Console.WriteLine("(Suma 2 Números Complejos) -> Ingrese el segundo número que represente la parte imaginaria  y presione la tecla Enter");
             imaginary2 = Convert.ToInt32(System.Console.ReadLine());
 
             ISum sumComplex = new SumComplex(new Complex() { Num1 = num1, Imaginary1 = imaginary1, Num2 = num2, Imaginary2 = imaginary2 });
-            responseSum = calculatorService.GetSum(sumComplex);
+            responseSumTwoNumbers = calculatorService.GetSumTwoNumbers(sumComplex);
 
-            response = !string.IsNullOrEmpty(responseSum.ErrorMessage) ? responseSum.ErrorMessage : $"El resultado de la operación suma es: ({num1} + {imaginary1}i) + ({num2} + {imaginary2}i)= " + responseSum.Result;
+            response = !string.IsNullOrEmpty(responseSumTwoNumbers.ErrorMessage) ? responseSumTwoNumbers.ErrorMessage : $"El resultado de la operación suma es: ({num1} + {imaginary1}i) + ({num2} + {imaginary2}i)= " + responseSumTwoNumbers.Result;
+            System.Console.WriteLine(response);
+
+            await operationService.SaveOperationAsync(new Operation()
+            {
+                IdOperation = Guid.NewGuid().ToString(),
+                Description = response,
+                CreationDate = DateTime.Now
+            });
+            #endregion
+
+            #region Invoca servicios de operación suma de varios números enteros y guardado de la operación en la base de datos
+            int[] numbers;
+
+            System.Console.WriteLine("(Suma Números Enteros) -> Ingrese varios números separados por coma ',' y presione la tecla Enter");
+            numbers = System.Console.ReadLine().Split(',')
+                             .Select(int.Parse)
+                             .ToArray(); ;
+
+            ISum sumInteger = new SumInteger(new Integer() { Numbers = numbers});
+            var responseSumNumbers = calculatorService.GetSumNumbers(sumInteger);
+
+            response = !string.IsNullOrEmpty(responseSumNumbers.ErrorMessage) ? responseSumNumbers.ErrorMessage : $"El resultado de sumar '{string.Join("+", (from a in numbers select a.ToString()).ToList())}' es: " + responseSumNumbers.Result;
             System.Console.WriteLine(response);
 
             await operationService.SaveOperationAsync(new Operation()

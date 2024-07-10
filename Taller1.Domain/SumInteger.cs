@@ -15,7 +15,7 @@ namespace Taller1.Domain
             _integer = integer;
         }
 
-        public string? GetResult()
+        public string? GetSumTwoNumbers()
         {
             var result = _integerValidator.Validate(_integer);
             if (!result.IsValid)
@@ -25,6 +25,21 @@ namespace Taller1.Domain
             }
 
             return Convert.ToString(_integer.Num1 + _integer.Num2);
+        }
+
+        public string? GetSumNumbers()
+        {
+            int? sum = 0;
+
+            if (_integer.Numbers != null && _integer.Numbers.Any())
+            {
+                foreach (int num in _integer.Numbers)
+                {
+                    sum += num;
+                }
+            }
+
+            return Convert.ToString(sum);
         }
     }
 }

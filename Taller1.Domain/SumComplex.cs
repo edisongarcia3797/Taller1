@@ -15,7 +15,7 @@ namespace Taller1.Domain
             _complex = complex;
         }
 
-        public string GetResult()
+        public string GetSumTwoNumbers()
         {
             var result = _complexValidator.Validate(_complex);
             if (!result.IsValid)
@@ -27,6 +27,26 @@ namespace Taller1.Domain
             int? newReal = _complex.Num1 + _complex.Num2;
             int? newImaginary = _complex.Imaginary1 + _complex.Imaginary2;
             return $"{newReal} + {newImaginary}i";
+        }
+
+        public string GetSumNumbers()
+        {
+            int? sumNumber = 0, sumImaginary = 0;
+
+            if (_complex.Numbers != null && _complex.Numbers.Any() && _complex.Imaginarys != null && _complex.Imaginarys.Any())
+            {
+                foreach (int num in _complex.Numbers)
+                {
+                    sumNumber += num;
+                }
+
+                foreach (int imaginary in _complex.Imaginarys)
+                {
+                    sumImaginary += imaginary;
+                }
+            }
+
+            return $"{sumNumber} + {sumImaginary}i";
         }
     }
 }

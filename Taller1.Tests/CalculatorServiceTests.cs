@@ -15,7 +15,7 @@ namespace Taller1.Tests
             ISum sumInteger = new SumInteger(new Integer() { Num1 = 20, Num2 = 24 });
 
             var calculatorService = new CalculatorService();
-            var response = calculatorService.GetSum(sumInteger);
+            var response = calculatorService.GetSumTwoNumbers(sumInteger);
 
             Assert.AreEqual(response.Result, Convert.ToString(44));
         }
@@ -26,7 +26,7 @@ namespace Taller1.Tests
             ISum sumInteger = new SumInteger(new Integer() { Num1 = -20, Num2 = 24 });
 
             var calculatorService = new CalculatorService();
-            var response = calculatorService.GetSum(sumInteger);
+            var response = calculatorService.GetSumTwoNumbers(sumInteger);
 
             Assert.AreEqual(response.Result, "A business validation error occurred. Error detail: Num1 'Num1' debe ser mayor o igual que '-10'.");
         }
@@ -37,7 +37,7 @@ namespace Taller1.Tests
             ISum sumInteger = new SumInteger(new Integer() { Num1 = 20, Num2 = -24 });
 
             var calculatorService = new CalculatorService();
-            var response = calculatorService.GetSum(sumInteger);
+            var response = calculatorService.GetSumTwoNumbers(sumInteger);
 
             Assert.AreEqual(response.Result, "A business validation error occurred. Error detail: Num2 'Num2' debe ser mayor o igual que '-10'.");
         }
@@ -48,7 +48,7 @@ namespace Taller1.Tests
             ISum sumInteger = new SumInteger(new Integer() { Num1 = null, Num2 = 24 });
 
             var calculatorService = new CalculatorService();
-            var response = calculatorService.GetSum(sumInteger);
+            var response = calculatorService.GetSumTwoNumbers(sumInteger);
 
             Assert.AreEqual(response.Result, "A business validation error occurred. Error detail: Num1 'Num1' no debe estar vacío.");
         }
@@ -59,7 +59,7 @@ namespace Taller1.Tests
             ISum sumInteger = new SumInteger(new Integer() { Num1 = 20, Num2 = null });
 
             var calculatorService = new CalculatorService();
-            var response = calculatorService.GetSum(sumInteger);
+            var response = calculatorService.GetSumTwoNumbers(sumInteger);
 
             Assert.AreEqual(response.Result, "A business validation error occurred. Error detail: Num2 'Num2' no debe estar vacío.");
         }
@@ -70,7 +70,7 @@ namespace Taller1.Tests
             ISum sumComplex = new SumComplex(new Complex() { Num1 = 1, Imaginary1 = 5, Num2 = 3, Imaginary2 = 2 });
 
             var calculatorService = new CalculatorService();
-            var response = calculatorService.GetSum(sumComplex);
+            var response = calculatorService.GetSumTwoNumbers(sumComplex);
 
             Assert.AreEqual(response.Result, "4 + 7i");
         }
@@ -81,7 +81,7 @@ namespace Taller1.Tests
             ISum sumComplex = new SumComplex(new Complex() { Num1 = null, Imaginary1 = 5, Num2 = 3, Imaginary2 = 2 });
 
             var calculatorService = new CalculatorService();
-            var response = calculatorService.GetSum(sumComplex);
+            var response = calculatorService.GetSumTwoNumbers(sumComplex);
 
             Assert.AreEqual(response.Result, "A business validation error occurred. Error detail: Num1 'Num1' no debe estar vacío.");
         }
@@ -92,7 +92,7 @@ namespace Taller1.Tests
             ISum sumComplex = new SumComplex(new Complex() { Num1 = 1, Imaginary1 = 5, Num2 = null, Imaginary2 = 2 });
 
             var calculatorService = new CalculatorService();
-            var response = calculatorService.GetSum(sumComplex);
+            var response = calculatorService.GetSumTwoNumbers(sumComplex);
 
             Assert.AreEqual(response.Result, "A business validation error occurred. Error detail: Num2 'Num2' no debe estar vacío.");
         }
@@ -103,7 +103,7 @@ namespace Taller1.Tests
             ISum sumComplex = new SumComplex(new Complex() { Num1 = 1, Imaginary1 = null, Num2 = 8, Imaginary2 = 2 });
 
             var calculatorService = new CalculatorService();
-            var response = calculatorService.GetSum(sumComplex);
+            var response = calculatorService.GetSumTwoNumbers(sumComplex);
 
             Assert.AreEqual(response.Result, "A business validation error occurred. Error detail: Imaginary1 'Imaginary1' no debe estar vacío.");
         }
@@ -114,7 +114,7 @@ namespace Taller1.Tests
             ISum sumComplex = new SumComplex(new Complex() { Num1 = 1, Imaginary1 = 5, Num2 = 8, Imaginary2 = null });
 
             var calculatorService = new CalculatorService();
-            var response = calculatorService.GetSum(sumComplex);
+            var response = calculatorService.GetSumTwoNumbers(sumComplex);
 
             Assert.AreEqual(response.Result, "A business validation error occurred. Error detail: Imaginary2 'Imaginary2' no debe estar vacío.");
         }

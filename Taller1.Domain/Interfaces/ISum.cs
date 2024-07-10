@@ -2,6 +2,8 @@
 {
     public interface ISum 
     {
-        string? GetResult();
+        string? GetSumTwoNumbers();
+
+        string? GetSumNumbers();
     }
 }

@@ -2,6 +2,6 @@
 {
     public interface IMultiplication
     {
-        string? GetResult();
+        string? GetMultiplicationTwoNumbers();
     }
 }

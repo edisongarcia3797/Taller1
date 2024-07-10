@@ -12,7 +12,7 @@ namespace Taller1.Domain
             _integer = integer;
         }
 
-        public string? GetResult()
+        public string? GetMultiplicationTwoNumbers()
         {
             return Convert.ToString(_integer.Num1 * _integer.Num2);
         }
