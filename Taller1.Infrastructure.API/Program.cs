@@ -1,4 +1,3 @@
-using Microsoft.Extensions.Logging;
 using Taller1.Application.Interfaces;
 using Taller1.Application.Services;
 using Taller1.Infrastructure.Data.Context;
@@ -10,14 +9,14 @@ var builder = WebApplication.CreateBuilder(args);
 IOperationContext db = new OperationContext("server=127.0.0.1;port=3306;database=dbTaller1;user=root;password=12345");
 db.Database.EnsureCreated();
 OperationRepository calculatorRepository = new OperationRepository(db);
+
 IOperationService operationService = new OperationService(calculatorRepository);
 ICalculatorService calculatorService = new CalculatorService();
 
 builder.Services.AddSingleton(calculatorService);
 builder.Services.AddSingleton(operationService);
-
-
 builder.Services.AddControllers();
+
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
