@@ -6,12 +6,12 @@ namespace Taller1.Domain
 {
     public class SumComplex : ISum
     {
-        private readonly ComplexValidator _complexValidator;
+        private readonly ComplexSumValidator _complexValidator;
         private readonly Complex _complex;
 
         public SumComplex(Complex complex)
         {
-            _complexValidator = new ComplexValidator();
+            _complexValidator = new ComplexSumValidator();
             _complex = complex;
         }
 

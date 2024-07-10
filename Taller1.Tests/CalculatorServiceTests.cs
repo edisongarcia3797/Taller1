@@ -28,7 +28,7 @@ namespace Taller1.Tests
             var calculatorService = new CalculatorService();
             var response = calculatorService.GetSum(sumInteger);
 
-            Assert.AreEqual(response.Result, "A business validation error occurred. Error detail: Num1 'Num1' debe ser mayor que '0'.");
+            Assert.AreEqual(response.Result, "A business validation error occurred. Error detail: Num1 'Num1' debe ser mayor o igual que '-10'.");
         }
 
         [TestMethod]
@@ -39,7 +39,7 @@ namespace Taller1.Tests
             var calculatorService = new CalculatorService();
             var response = calculatorService.GetSum(sumInteger);
 
-            Assert.AreEqual(response.Result, "A business validation error occurred. Error detail: Num2 'Num2' debe ser mayor que '0'.");
+            Assert.AreEqual(response.Result, "A business validation error occurred. Error detail: Num2 'Num2' debe ser mayor o igual que '-10'.");
         }
 
         [TestMethod]

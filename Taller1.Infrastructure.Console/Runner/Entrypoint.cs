@@ -39,9 +39,9 @@ namespace Taller1.Infrastructure.Console.Runner
             #region Invoca servicios de operación suma de números enteros y guardado de la operación en la base de datos
             int num1, num2, imaginary1, imaginary2;
             string response;
-            System.Console.WriteLine("Ingrese un número y presione la tecla Enter");
+            System.Console.WriteLine("(Suma Números Enteros) -> Ingrese un número y presione la tecla Enter");
             num1 = Convert.ToInt32(System.Console.ReadLine());
-            System.Console.WriteLine("Ingrese el segundo número y presione la tecla Enter");
+            System.Console.WriteLine("(Suma Números Enteros) -> Ingrese el segundo número y presione la tecla Enter");
             num2 = Convert.ToInt32(System.Console.ReadLine());
 
             var calculatorService = CreateCalculatorService();
@@ -63,13 +63,13 @@ namespace Taller1.Infrastructure.Console.Runner
 
             #region Invoca servicios de operación suma de números complejos y guardado de la operación en la base de datos
 
-            System.Console.WriteLine("Ingrese un número real y presione la tecla Enter");
+            System.Console.WriteLine("(Suma Números Complejos) -> Ingrese un número real y presione la tecla Enter");
             num1 = Convert.ToInt32(System.Console.ReadLine());
-            System.Console.WriteLine("Ingrese el segundo número real y presione la tecla Enter");
+            System.Console.WriteLine("(Suma Números Complejos) -> Ingrese el segundo número real y presione la tecla Enter");
             num2 = Convert.ToInt32(System.Console.ReadLine());
-            System.Console.WriteLine("Ingrese un número que represente la parte imaginaria y presione la tecla Enter");
+            System.Console.WriteLine("(Suma Números Complejos) -> Ingrese un número que represente la parte imaginaria y presione la tecla Enter");
             imaginary1 = Convert.ToInt32(System.Console.ReadLine());
-            System.Console.WriteLine("Ingrese el segundo número que represente la parte imaginaria  y presione la tecla Enter");
+            System.Console.WriteLine("(Suma Números Complejos) -> Ingrese el segundo número que represente la parte imaginaria  y presione la tecla Enter");
             imaginary2 = Convert.ToInt32(System.Console.ReadLine());
 
             ISum sumComplex = new SumComplex(new Complex() { Num1 = num1, Imaginary1 = imaginary1, Num2 = num2, Imaginary2 = imaginary2 });

@@ -6,12 +6,12 @@ namespace Taller1.Domain
 {
     public class SumInteger : ISum
     {
-        private readonly IntegerValidator _integerValidator;
+        private readonly IntegerSumValidator _integerValidator;
         private readonly Integer _integer;
 
         public SumInteger(Integer integer)
         {
-            _integerValidator = new IntegerValidator();
+            _integerValidator = new IntegerSumValidator();
             _integer = integer;
         }
 

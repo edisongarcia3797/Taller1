@@ -1,9 +1,6 @@
-﻿using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
+﻿using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Taller1.Infrastructure.Console.Runner;
-using Taller1.Infrastructure.Data.Context;
-
 
 namespace Taller1.Infrastructure.Console
 {

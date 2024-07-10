@@ -3,18 +3,18 @@ using Taller1.Domain.Models;
 
 namespace Taller1.Domain.Validations
 {
-    public class IntegerValidator : AbstractValidator<Integer>
+    public class IntegerSumValidator : AbstractValidator<Integer>
     {
-        public IntegerValidator()
+        public IntegerSumValidator()
         {
-            RuleFor(x => x.Num1).NotNull().GreaterThan(0);
-            RuleFor(x => x.Num2).NotNull().GreaterThan(0);
+            RuleFor(x => x.Num1).NotNull().GreaterThanOrEqualTo(-10);
+            RuleFor(x => x.Num2).NotNull().GreaterThanOrEqualTo(-10);
         }
     }
 
-    public class ComplexValidator : AbstractValidator<Complex>
+    public class ComplexSumValidator : AbstractValidator<Complex>
     {
-        public ComplexValidator()
+        public ComplexSumValidator()
         {
             RuleFor(x => x.Num1).NotNull();
             RuleFor(x => x.Num2).NotNull();
