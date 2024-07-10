@@ -52,10 +52,7 @@ namespace Taller1.Infrastructure.API.Controllers
                     return StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
                 }
             }
-            else
-            {
-                return BadRequest(ModelState);
-            }
+            else return BadRequest(ModelState);
         }
     }
 }
