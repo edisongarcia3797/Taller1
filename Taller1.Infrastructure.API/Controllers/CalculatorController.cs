@@ -21,8 +21,8 @@ namespace Taller1.Infrastructure.API.Controllers
             _calculatorService = calculatorService;
         }
 
-        [HttpPost(Name = "SumTwoNumbers")]
-        public async Task<IActionResult> SumTwoNumbers([FromBody] Models.RequestData requestData)
+        [HttpPost(Name = "SumTwoNumbersInteger")]
+        public async Task<IActionResult> SumTwoNumbersInteger([FromBody] Models.RequestTwoNumbersInteger requestData)
         {
             if (ModelState.IsValid)
             {
@@ -35,6 +35,40 @@ namespace Taller1.Infrastructure.API.Controllers
                     responseData = new Models.ResponseData
                     {
                         Message = !string.IsNullOrEmpty(responseSumTwoNumbers.ErrorMessage) ? responseSumTwoNumbers.ErrorMessage : $"El resultado de la operación suma es: {requestData.Num1} + {requestData.Num2} = " + responseSumTwoNumbers.Result
+                    };
+
+                    await _operationService.SaveOperationAsync(new Operation()
+                    {
+                        IdOperation = Guid.NewGuid().ToString(),
+                        Description = responseData.Message,
+                        CreationDate = DateTime.Now
+                    });
+
+                    return Ok(responseData);
+                }
+                catch (Exception ex)
+                {
+                    _logger.LogError("[SumTwoNumbers] {ex.Message}", ex.Message);
+                    return StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
+                }
+            }
+            else return BadRequest(ModelState);
+        }
+
+        [HttpPost(Name = "SumTwoNumbersComplex")]
+        public async Task<IActionResult> SumTwoNumbersComplex([FromBody] Models.RequestTwoNumbersComplex requestData)
+        {
+            if (ModelState.IsValid)
+            {
+                Models.ResponseData responseData;
+                try
+                {
+                    ISum sumTwoComplex = new SumComplex(new Complex() { Num1 = requestData.Num1, Num2 = requestData.Num2,Imaginary1 = requestData.Imaginary1, Imaginary2 = requestData.Imaginary2 });
+                    var responseSumTwoNumbers = _calculatorService.GetSumTwoNumbers(sumTwoComplex);
+
+                    responseData = new Models.ResponseData
+                    {
+                        Message = !string.IsNullOrEmpty(responseSumTwoNumbers.ErrorMessage) ? responseSumTwoNumbers.ErrorMessage : $"El resultado de la operación suma es: ({requestData.Num1} + {requestData.Imaginary1}i) + ({requestData.Num2} + {requestData.Imaginary2}i)= " + responseSumTwoNumbers.Result
                     };
 
                     await _operationService.SaveOperationAsync(new Operation()
