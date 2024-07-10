@@ -36,7 +36,7 @@ namespace Taller1.Infrastructure.Console.Runner
             }
             #endregion
 
-            #region Invoca servicios de operación suma de dos números enteros y guardado de la operación en la base de datos
+            #region Invoca servicios para sumar dos números enteros y guardado de la operación en la base de datos
             int num1, num2, imaginary1, imaginary2;
             string response;
             System.Console.WriteLine("(Suma 2 Números Enteros) -> Ingrese un número y presione la tecla Enter");
@@ -61,7 +61,7 @@ namespace Taller1.Infrastructure.Console.Runner
             });
             #endregion
 
-            #region Invoca servicios de operación suma de dos números complejos y guardado de la operación en la base de datos
+            #region Invoca servicios para sumar dos números complejos y guardado de la operación en la base de datos
 
             System.Console.WriteLine("(Suma 2 Números Complejos) -> Ingrese un número real y presione la tecla Enter");
             num1 = Convert.ToInt32(System.Console.ReadLine());
@@ -86,7 +86,7 @@ namespace Taller1.Infrastructure.Console.Runner
             });
             #endregion
 
-            #region Invoca servicios de operación suma de varios números enteros y guardado de la operación en la base de datos
+            #region Invoca servicios para sumar varios números enteros y guardado de la operación en la base de datos
             int[] numbers;
 
             System.Console.WriteLine("(Suma Números Enteros) -> Ingrese varios números separados por coma ',' y presione la tecla Enter");
@@ -98,6 +98,48 @@ namespace Taller1.Infrastructure.Console.Runner
             var responseSumNumbers = calculatorService.GetSumNumbers(sumInteger);
 
             response = !string.IsNullOrEmpty(responseSumNumbers.ErrorMessage) ? responseSumNumbers.ErrorMessage : $"El resultado de sumar '{string.Join("+", (from a in numbers select a.ToString()).ToList())}' es: " + responseSumNumbers.Result;
+            System.Console.WriteLine(response);
+
+            await operationService.SaveOperationAsync(new Operation()
+            {
+                IdOperation = Guid.NewGuid().ToString(),
+                Description = response,
+                CreationDate = DateTime.Now
+            });
+            #endregion
+
+            #region Invoca servicios para multiplicar dos números enteros y guardado de la operación en la base de datos
+
+            System.Console.WriteLine("(Multiplicación 2 Números Enteros) -> Ingrese un número y presione la tecla Enter");
+            num1 = Convert.ToInt32(System.Console.ReadLine());
+            System.Console.WriteLine("(Multiplicación 2 Números Enteros) -> Ingrese el segundo número y presione la tecla Enter");
+            num2 = Convert.ToInt32(System.Console.ReadLine());
+
+            IMultiplication multTwoInteger = new MultiplicationInteger(new Integer() { Num1 = num1, Num2 = num2 });
+            var responseMultiplicationTwoNumbers = calculatorService.GetMultiplicationTwoNumbers(multTwoInteger);
+
+            response = !string.IsNullOrEmpty(responseMultiplicationTwoNumbers.ErrorMessage) ? responseMultiplicationTwoNumbers.ErrorMessage : $"El resultado de multiplicar: {num1} * {num2} = " + responseMultiplicationTwoNumbers.Result;
+            System.Console.WriteLine(response);
+
+            await operationService.SaveOperationAsync(new Operation()
+            {
+                IdOperation = Guid.NewGuid().ToString(),
+                Description = response,
+                CreationDate = DateTime.Now
+            });
+            #endregion
+
+            #region Invoca servicios para multiplicar varios números enteros y guardado de la operación en la base de datos
+            
+            System.Console.WriteLine("(Multiplicación Números Enteros) -> Ingrese varios números separados por coma ',' y presione la tecla Enter");
+            numbers = System.Console.ReadLine().Split(',')
+                             .Select(int.Parse)
+                             .ToArray(); ;
+
+            IMultiplication multInteger = new MultiplicationInteger(new Integer() { Numbers = numbers });
+            var responseMultiplicationNumbers = calculatorService.GetMultiplicationNumbers(multInteger);
+
+            response = !string.IsNullOrEmpty(responseMultiplicationNumbers.ErrorMessage) ? responseMultiplicationNumbers.ErrorMessage : $"El resultado de multiplicar '{string.Join("*", (from a in numbers select a.ToString()).ToList())}' es: " + responseMultiplicationNumbers.Result;
             System.Console.WriteLine(response);
 
             await operationService.SaveOperationAsync(new Operation()

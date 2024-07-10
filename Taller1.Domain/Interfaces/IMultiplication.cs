@@ -3,5 +3,7 @@
     public interface IMultiplication
     {
         string? GetMultiplicationTwoNumbers();
+
+        string? GetMultiplicationNumbers();
     }
 }

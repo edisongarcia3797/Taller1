@@ -34,5 +34,35 @@ namespace Taller1.Application.Services
 
             return response;
         }
+
+        public Response GetMultiplicationTwoNumbers(IMultiplication mult)
+        {
+            Response response = new();
+            try
+            {
+                response.Result = mult.GetMultiplicationTwoNumbers();
+            }
+            catch (Exception ex)
+            {
+                response.ErrorMessage = $"An error occurred during the sum operation. Error detail: {ex.Message}";
+            }
+
+            return response;
+        }
+
+        public Response GetMultiplicationNumbers(IMultiplication mult)
+        {
+            Response response = new();
+            try
+            {
+                response.Result = mult.GetMultiplicationNumbers();
+            }
+            catch (Exception ex)
+            {
+                response.ErrorMessage = $"An error occurred during the sum operation. Error detail: {ex.Message}";
+            }
+
+            return response;
+        }
     }
 }

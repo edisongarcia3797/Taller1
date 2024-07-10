@@ -18,5 +18,25 @@ namespace Taller1.Domain
             int? newImaginary = _complex.Imaginary1 * _complex.Imaginary2;
             return $"{newReal} + {newImaginary}i";
         }
+
+        public string GetMultiplicationNumbers()
+        {
+            int? multNumber = 0, multImaginary = 0;
+
+            if (_complex.Numbers != null && _complex.Numbers.Any() && _complex.Imaginarys != null && _complex.Imaginarys.Any())
+            {
+                foreach (int num in _complex.Numbers)
+                {
+                    multNumber *= num;
+                }
+
+                foreach (int imaginary in _complex.Imaginarys)
+                {
+                    multImaginary *= imaginary;
+                }
+            }
+
+            return $"{multNumber} + {multImaginary}i";
+        }
     }
 }
