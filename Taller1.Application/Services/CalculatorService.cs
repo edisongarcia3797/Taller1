@@ -45,7 +45,7 @@ namespace Taller1.Application.Services
             }
             catch (Exception ex)
             {
-                response.ErrorMessage = $"An error occurred during the sum operation. Error detail: {ex.Message}";
+                response.ErrorMessage = $"An error occurred during the multiplication operation. Error detail: {ex.Message}";
             }
 
             return response;
@@ -60,7 +60,7 @@ namespace Taller1.Application.Services
             }
             catch (Exception ex)
             {
-                response.ErrorMessage = $"An error occurred during the sum operation. Error detail: {ex.Message}";
+                response.ErrorMessage = $"An error occurred during the multiplication operation. Error detail: {ex.Message}";
             }
 
             return response;
